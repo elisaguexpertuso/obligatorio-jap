@@ -25,9 +25,8 @@ form.addEventListener("submit", e=>{
   if (entrar){
     parrafo.innerHTML = warnings
   } else{
-    
-        window.location.href = "ex-index.html";
-    });
+            window.location.href = "ex-index.html";
+    };
      
   
 });
