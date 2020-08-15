@@ -27,7 +27,7 @@ form.addEventListener("submit", e=>{
   } else{
     document.querySelector("#redireccionar")
     .addEventListener("click", () =>{
-        window.location.href = "index.html";
+        window.location.href = "ex-index.html";
     });
      
   }
