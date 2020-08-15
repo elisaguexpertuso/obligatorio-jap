@@ -25,10 +25,8 @@ form.addEventListener("submit", e=>{
   if (entrar){
     parrafo.innerHTML = warnings
   } else{
-    document.querySelector("#redireccionar")
-    .addEventListener("click", () =>{
-        window.location.href = "index.html";
-    });
+    window.location.href = "index.html";
+    
      
   }
-})
+});
