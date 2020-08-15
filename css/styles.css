@@ -137,10 +137,9 @@ text-decoration: inherit;
 }
 
 .checked {
-<<<<<<< HEAD
-  color: orange;
+color: orange;
 }
-body {
+.text-center {
   text-align: left;
   display: flex-start;
   align-items: center;
@@ -149,6 +148,7 @@ body {
   background-color: #f5f5f5;
 }
 .form-signin {
+  
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -160,28 +160,4 @@ body {
   margin: auto;
   color: #B06AB3;
   padding-top: 20px ;
-=======
-color: orange;
-}
-body {
-text-align: left;
-display: flex-start;
-align-items: center;
-padding-top: 40px;
-padding-bottom: 40px;
-background-color: #f5f5f5;
-}
-.form-signin {
-width: 100%;
-max-width: 330px;
-padding: 15px;
-margin: auto;
-}
-.warnings {
-width: 200px;
-text-align: center;
-margin: auto;
-color: #B06AB3;
-padding-top: 20px ;
->>>>>>> ab21a33fe8830bd3570fb89f33fa9273d2663fb9
 }
