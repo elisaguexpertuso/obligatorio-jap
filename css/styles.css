@@ -161,3 +161,6 @@ color: orange;
   color: #B06AB3;
   padding-top: 20px ;
 }
+.py-2 d-none d-md-inline-block {
+  color: white
+}
