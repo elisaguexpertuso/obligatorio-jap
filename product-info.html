@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -26,14 +27,68 @@
       <a id="logged" class="py-2 d-none d-md-inline-block usuario">Usuario</a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <main role="main" class="pb-5">
+    <div class="container mt-5">
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Categoría</dt>
+        <dd>
+          <p id="categoría"></p>
+        </dd>
+
+        <dt>Costo</dt>
+        <dd>
+          <p id="costo"></p>
+        </dd>
+
+        <dt>Imágenes</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="product-info-id">
+          </div>
+        </dd>
+      </dl>
+      
     </div>
+    
+    <div class="container">
+    <div class="row">
+    <p id="comments"></p>     
   </div>
+</div>
+
+    <div id="refresh">
+
+      <div class="collapse" id="collapseExample">
+      <div class="card card-body" >
+  
+          <form style="display: block; margin: 0 auto;">
+            <input id="score" type="number" placeholder="Califica este producto">
+            <p id="calificacion"></p>
+            <br><br>
+            <input style="height: 100px" id="comentario" placeholder="Deja aquí tu comentario">
+            <p id="errorComentario"></p>
+            <br><br>
+            <button class="btn btn-dark" type="button" onclick="nuevocomentario()">Enviar</button> 
+          </form>
+          
+      </div>
+    </div>
+    <p>
+      <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" 
+      aria-expanded="false" aria-controls="collapseExample" style="display: block; margin: 0 auto;">Ingresar un comentario </button>
+     </p>
+  </div>
+
+  <p id="enviado"></p>
+     
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
