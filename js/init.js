@@ -47,3 +47,6 @@ document.addEventListener("DOMContentLoaded", function(e){
   sessionStorage.getItem("Usuario activo");
   document.getElementById("logged").innerHTML = sessionStorage.getItem("Usuario activo");
 });
+function cerrarSesion(){
+  sessionStorage.clear();
+}
