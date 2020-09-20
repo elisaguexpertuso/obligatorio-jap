@@ -19,12 +19,22 @@
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="ex-index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="logged" class="py-2 d-none d-md-inline-block usuario">Usuario</a>
+      
+      <div class="dropdown">
+        <a id= "logged" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Usuario
+        </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="my-profile.html">Perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          
+          <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar sesión</a>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -69,10 +79,10 @@
       <div class="card card-body" >
   
           <form style="display: block; margin: 0 auto;">
-            <input id="score" type="number" placeholder="Califica este producto">
+            <input id="score" type="number" maxlength="5" minlength="1" style="width: 200px" placeholder="Califica este producto">
             <p id="calificacion"></p>
             <br><br>
-            <input style="height: 100px" id="comentario" placeholder="Deja aquí tu comentario">
+            <input style="height: 100px; width: 200px" id="comentario" placeholder="Deja aquí tu comentario">
             <p id="errorComentario"></p>
             <br><br>
             <button class="btn btn-dark" type="button" onclick="nuevocomentario()">Enviar</button> 
@@ -86,8 +96,17 @@
      </p>
   </div>
 
-  <p id="enviado"></p>
-     
+  <p  id="enviado" style="color:cornflowerblue; text-align: center;"></p>
+
+  
+<div class="container text-left">
+  <h5>Productos relacionados:</h5>
+  <div class="row">
+<div id="recomendado"></div>
+  </div>
+</div>
+
+
   </main>
   <footer class="text-muted">
     <div class="container">
