@@ -89,10 +89,10 @@
               
           </tbody></table>
           <hr class="my-3" style="border: 0;border-top: 1px solid rgba(0,0,0,.1)">
-</div>
-</div>
-</div>
 
+</div>
+</div>
+</div>
 
 <div class="col-lg-4 mb-4">
   <div class="row">
@@ -102,38 +102,219 @@
         <tbody><tr class="claseenvio">
           
           <td  class="text-left">Envío</td>
-          
-          <td  class="text-right" id="envio" value="150"> 150 </td>
+          <td  class="text-right">$ <span class="order-product-subtotal" id="envio"></span> </td>
         </tr>
 
         <tbody><tr class="subtotal2">
           
           <td  class="text-left">Subtotal</td>
-          <td  class="text-right"> <span class="order-product-subtotal" id="subtotal2">100</span> </td>
+          <td  class="text-right"> $ <span class="order-product-subtotal" id="subtotal2">  </span> </td>
         </tr>
 
       <table class="table table-striped">
         <tbody><tr class="totals key">
                     
           <td  class="text-left"><strong>Total</strong></td>
-          <td  class="text-right">
-            <span id="total">  </span>
-          </td>
+          <td  class="text-right">$ <span  id="totalisimo">  </span></td>
+ 
         </tr>
 
       </tbody></table>
 
-      <div class="text-center cart-actions" style="background: none;">
-        <a  class="btn btn-primary btn-block" title="Proceder al Pago">Proceder al Pago</a>
+      <div style="background: none;">
+        
+        <div id="modal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          
+          <div class="modal-dialog modal-dialog-centered" role="document"> 
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Método de pago</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div  class="modal-body" style="text-align: center;">
+
+              
+                <input type="radio" onclick="desplegarse()" name="desplegar" id="desplegarse1"> Tranferencia bancaria </input> 
+                <div id="demo" class="collapse">
+                  
+
+                    <div class="form-group">
+                      <label for="inputZip"><strong>BANCO</strong></label>
+                      <div type="text" class="form-control" id="banco"> Santander</div> 
+                    </div>
+
+                    <div class="form-group " >
+                      <label for="inputZip"> <strong>IBAN</strong></label>
+                      <div type="text" class="form-control" id="banco"> ES6000491500051234567892</div> 
+                    </div>
+
+                    <div class="form-group " >
+                      <label for="inputZip"> <strong>BIC</strong> </label>
+                      <div type="text" class="form-control" id="banco"> BSCHESMG </div> 
+                    </div>
+                  
+                 
+                  </div>
+                  <br>
+                  <br>
+                  <input type="radio" onclick="desplegar2()"  name="desplegar" id="desplegarse2">Tarjeta de crédito</input>
+                    <div id="demo2" class="collapse">
+                   
+                  <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+                    <div class="grupo">
+                      <label for="inputNumero" class="label1">Número tarjeta</label>
+                      <input class="input1" type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                    </div>
+                    </form>
+  
+                      <div class="grupo">
+                        <label for="inputNombre" class="label1">Nombre tarjeta</label>
+                        <input class="input1" type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                      </div>
+  
+                      <div class="flexbox">
+                        <div class="grupo expira">
+                          <label for="selectMes" class="label1">Expiración</label>
+                          <div class="flexbox">
+                            <div class="grupo-select">
+                              <select class="select1" name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3</option>
+                                <option value=""> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                              </select>
+                            </div>  
+                            <div class="grupo-select">
+                              <select class="select1" name="ano" id="selectAno">
+                                <option disabled selected>Año</option>
+                                <option value="2020"> 2020 </option>
+                                <option value="2021"> 2021 </option>
+                                <option value="2022"> 2022</option>
+                                <option value="2023"> 2023 </option>
+                                <option value="2024"> 2024 </option>
+                                <option value="2025"> 2025 </option>
+                                <option value="2026"> 2026 </option>
+                                <option value="2027"> 2027 </option>
+                                <option value="2028"> 2028 </option>
+                              </select>
+                            </div>                         
+                          </div>
+                        </div>
+  
+                        <div class="grupo cvv">
+                          <label for="inputCVV" class="label1">CVV</label>
+                          <input class="input1" type="text" id="inputCVV" maxlength="3">
+                        </div>
+                      </div>
+                      </form>
+                   </div>
+              
+              </div>
+              <span class="warnings" id="error-desplegar"> </span>
+              <span class="warnings" id="compraExitosa2"> </span>
+
+              <a href="categories.html" class="btn btn-link btn-block" title="← Continuar Comprando" id="refresh"> ← Continuar Comprando </a>
+              
+              <div class="modal-footer" >
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn-enviar" onclick="validarMetodoDePago()">Enviar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
         <a href="categories.html" class="btn btn-link btn-block" title="← Continuar Comprando">← Continuar Comprando</a>
       </div>
     </div>
   </div>
 </div>
-    
-</div>
+<div class="container">
+  <form>
+    <div class="form-group">
+    <h5 class="text-center"> Método de envío </h5>
+    <form id="formularioEnvio">
+      <div class="form-group">
+        <label for="inputAddress">Dirección</label>
+        <input type="text" class="form-control" id="direccion" onblur="validarDireccion()" placeholder="Nombre de calle">
+        <span class="warnings" id="error-direccion"> </span>
+      </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Esquina</label>
+          <input type="text" class="form-control" id="esquina" placeholder="Nombre de esquina" onblur="validarEsquina()">
+          <span class="warnings" id="error-esquina"></span>
+        </div>
+        
+        
+        <div class="form-group col-md-2">
+          <label for="inputZip">Número de puerta</label>
+          <input type="number" class="form-control" id="numero" placeholder="Número de puerta" min="0" onblur="validarNumero()">
+          <span class="warnings" id="error-numero"></span>
+        </div>
+
+        <div class="form-group col-md-2">
+          
+          <label for="selectPaises">Pais</label>
+          <select name="selectPaises" id="pais" onchange="validarPais(this.value)">
+            <option value="nada">--Elegir una opción--</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+          </select>
+          <span class="warnings" id="error-pais"> </span>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="estandar" value="15%" onclick="validarRadio()" onchange="precioEnvio(this.value)" >
+          <label class="form-check-label" for="exampleRadios1">
+            Envío premium (2-5 días) - Costo del 15% sobre subtotal.
+          </label>
+        </div>
+        <br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="envio-express" value="8%" onclick="validarRadio()"onchange="precioEnvio(this.value)" >
+          <label class="form-check-label" for="exampleRadios2">
+            Envío express (5-8 días) - Costo del 8% sobre subtotal.
+          </label>
+        </div>
+        <br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="internacional" value="5%" onclick="validarRadio()" onchange="precioEnvio(this.value)" >
+          <label class="form-check-label" for="exampleRadios3">
+            Envío internacional express (7-21 días) - Costo del 5% sobre subtotal.
+          </label>
+        </div>
+        <span class="warnings" id="error-seleccion"> </span>
+      </div>
+    </form>
+    <br>
+    <div class="container">
+    <button type="button" id="btn2" class="btn btn-primary btn-block" onclick="validarMetodoDeEnvio()" >
+      Proceder al pago
+    </button> 
+
+  </div>
+    <br>
+    <br>
+ </div>   
+</div>
+</div>
 </div>
 </main>
   <div id="spinner-wrapper">
