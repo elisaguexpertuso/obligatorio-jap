@@ -160,5 +160,76 @@ color: orange;
   margin: auto;
   color: #B06AB3;
   padding-top: 20px ;
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem!important;
+}
+/*---------formulario tarjeta---------*/
+.formulario-tarjeta{
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 150px 30px 30px;
+  border-radius: 10px;
+  position: relative;
+}
 
+.formulario-tarjeta, .label1{
+  display: block;
+  color: #7d8994;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.formulario-tarjeta, .input1,
+.formulario-tarjeta, .select1,
+.btn-enviar {
+  border: 2px solid #ced6e0;
+  font-size: 16px;
+  height: 50px;
+  width: 100%;
+  padding: 5px 12px;
+  transition: .3s ease all;
+  border-radius: 5px;
+}
+
+.formulario-tarjeta, .input1:hover,
+.formulario-tarjeta .select1:hover {
+  border: 2px solid #93bded;
+}
+.formulario-tarjeta, .input1:focus,
+.formulario-tarjeta, .select1:focus {
+  outline: rgb(4,4,4);
+  box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+.formulario-tarjeta, .input1 {
+margin-bottom: 20px;
+text-transform: uppercase
+}
+.formulario-tarjeta, .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+.formulario-tarjeta, .expira {
+  width: 100%;
+}
+.formulario-tarjeta, .cvv {
+  min-width: 100px;
+}
+.formulario-tarjeta, .grupo-select {
+  width:100% ;
+  margin-right: 15px;
+}
+
+.formulario-tarjeta, .btn-enviar {
+  border: none ;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background: #2364d2;
+  box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+  cursor: pointer;
+}
+.formulario-tarjeta, .btn-enviar:hover {
+  background: #1850b1;
 }

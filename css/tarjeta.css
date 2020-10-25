@@ -1,0 +1,120 @@
+/*---------formulario tarjeta---------*/
+.formulario-tarjeta{
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .formulario-tarjeta, label{
+    display: block;
+    color: #7d8994;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .formulario-tarjeta, input,
+  .formulario-tarjeta, select,
+  .btn-enviar {
+    border: 2px solid #ced6e0;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+  }
+  
+  .formulario-tarjeta, input:hover,
+  .formulario-tarjeta select:hover {
+    border: 2px solid #93bded;
+  }
+  .formulario-tarjeta, input:focus,
+  .formulario-tarjeta, select:focus {
+    outline: rgb(4,4,4);
+    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+  }
+  .formulario-tarjeta, input {
+  margin-bottom: 20px;
+  text-transform: uppercase
+  }
+  .formulario-tarjeta, .flexbox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .formulario-tarjeta, .expira {
+    width: 100%;
+  }
+  .formulario-tarjeta, .cvv {
+    min-width: 100px;
+  }
+  .formulario-tarjeta, .grupo-select {
+    width:100% ;
+    margin-right: 15px;
+  }
+  
+  .formulario-tarjeta, .btn-enviar {
+    border: none ;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #2364d2;
+    box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+    cursor: pointer;
+  }
+  .formulario-tarjeta, .btn-enviar:hover {
+    background: #1850b1;
+  }
+
+  <form>
+            <div class="form-group">
+            <h5 class="text-center"> Método de envío </h5>
+            <form>
+              <div class="form-group">
+                <label for="inputAddress">Dirección</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Nombre de calle">
+                <label for="" name="error">Ingrese una dirección válida</label>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Ciudad</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">Pais</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>--Elegir una opción--</option>
+                    <option>Uruguay</option>
+                    <option>Argentina</option>
+                    <option>Brasil</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Código postal</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="container">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="retiro" value="option1" >
+                  <label class="form-check-label" for="exampleRadios1">
+                    Envío estándar (7-10 días)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="express" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Envío express (3-5 días)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                  <label class="form-check-label" for="exampleRadios3">
+                    Retiro en local
+                  </label>
+                </div>
+              </div>
+            </form>
