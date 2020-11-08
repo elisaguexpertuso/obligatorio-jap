@@ -54,14 +54,61 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  
+  <br>
+  <br>
+  <div class="container">
+    
+      <div class="col-lg-4 offset-lg-4">
+
+  <selection>
+
+      <h2>Mi perfil</h2>
+      <p>Aquí podrás editar y guardar tus datos personales</p>
+<br>
+
+<div id="perfil-form">
+  <form>
+    
+    <div class="form-group">
+      <label class="nombre-form" id="nombre-form1">Nombre y apellido</label><br>
+      <input type="text" class="text form-control" id="nombre"> 
+      <span id="nombre-error" class="warnings"> </span>
     </div>
+
+    <div class="form-group">
+      <label class="edad-form" id="edad-form1">Edad</label><br>
+      <input type="text" class="text form-control" id="edad">
+      <span id="edad-error" class="warnings"> </span>
+    </div>
+
+    <div class="form-group">
+      <label class="email-form" id="email-form1">E-mail</label><br>
+      <input type="text" class="text form-control" id="email"> 
+      <span id="email-error" class="warnings"> </span>
+    </div>
+
+    <div class="form-group">
+      <label class="telefono-form" id="telefono-form1">Teléfono de contacto</label><br>
+      <input type="text" class="text form-control" id="telefono"> 
+      <span id="telefono-error" class="warnings"> </span>
+    </div>
+    
+    <div class="modal-footer" >
+      <a type="button" class="btn btn-secondary" href="my-profile.html" onclick="borrarTodo()">Editar</a>
+      <button type="button" class="btn btn-secondary" onclick="formulario1 ()">Guardar</button>
+    </div>
+
+    </form>
+</div>
+
+  </selection>
+    </div>
+    
   </div>
+<br>
+<br>
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
@@ -73,6 +120,7 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
+  </div> 
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
