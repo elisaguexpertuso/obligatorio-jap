@@ -12,6 +12,8 @@ function showProductGallery(array){
         let imageSrc = array[i];
 
         htmlContentToAppend += `
+
+        
         <div class="col-lg-3 col-md-4 col-6">
             <div class="d-block mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
@@ -57,22 +59,25 @@ function recomendados(array){
         if(i==[1]|| i == [3]){
 
         htmlContentToAppend += `
-        
  
-        <div class="card" style="width: 18rem;">
-   
-        <img src="` + recomendados.imgSrc + `"  class="img-thumbnail">
-    
-    <div class="card-body">
-    
-        <h4 class="card-title">`+ recomendados.name +`</h4>
-    
-        <p class="card-text">` + recomendados.description + `</p> 
-        
-    <a class="btn btn-primary" >Ver</a>
-    
+        <div class="col-md-4">   
+    <a href="product-info.html" class="list-group-item-action card">
+ 
+        <img src="` + recomendados.imgSrc + `" alt=" "  class="card-img-top">
+
+    <div class="card-body" style="height:200px;">
+
+        <h5 class="card-title">`+ recomendados.name +`</h5>
+        <p class="card-text">` + recomendados.description + `</p>
+        <small class="text-muted">` + recomendados.soldCount + ` vendidos</small>
+    </div>     
+     
+    <div class="card-footer">
+        <small class="text-muted">` + recomendados.cost + ` ` + recomendados.currency + `</small>
     </div>
-    </div>
+
+    </a>
+    </div>        
 
 ` 
 
@@ -115,12 +120,10 @@ function showComments(comments){
         let commentario = comments[i];
 
     htmlContentToAppend += `
-    
-    <div class="container">
-    <div class="card border-muted mb-4" class="mx-auto>   
-    <div class = "text-center" style="max-width: 40rem;"> 
   
-   
+    <div class="card border-muted " class="mx-auto>   
+    <div class = "text-center" style="max-width: 40rem;"> 
+
              <div class="col">                               
         <small class="text-dark"> ` + "Puntuación:  " + commentario.score +  `</small>
          </div>  
@@ -138,8 +141,7 @@ function showComments(comments){
            </div> 
     </div>
     </div>  
-    </div>
-     
+      
     
     `
     
